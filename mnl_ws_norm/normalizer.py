@@ -36,7 +36,7 @@ def norm_spaces(input_str, space_type, remove_extra_spaces = False):
         current_category = get_category(current_char)
 
         if current_category == "SPACE":
-            if (last_category == "SPACE" and remove_extra_spaces == False) or (last_category == "NOTSPACE" and current_char != last_char):
+            if (last_category == "SPACE" and remove_extra_spaces == False) or (last_category == "NOTSPACE" or current_char != last_char):
                 result+=space_type
 
             last_category = current_category
