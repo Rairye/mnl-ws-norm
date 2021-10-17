@@ -18,3 +18,6 @@ My solution was to write a script for normalizing spaces in the document, and, t
 One common way to split (tokenize) strings into individual words (such as in English) in Python is to use the split method; for example -> words_list = “This is my sentence”.split(“ “)
 
 The split method is convenient and easy when only one type of space is used in the text. In the above example, a half-width space is used to split “This is my sentence.” into a list where each element contains only one word.
+
+However, there may be cases where you need to split words from text data where multiple types of spaces (or other whitespace characters) are used. This could be text sources written by multiple authors or text from the Internet (such as customer reviews or social media posts). This may also happen in text that was converted from an image or PDF using OCR.
+
