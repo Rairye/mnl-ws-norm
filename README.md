@@ -3,6 +3,10 @@ Light-weight tool for normalizing whitespace and accurately tokenizing words. Mu
 
 ## Installation
 
+```python
+pip install mnl-ws-norm
+```
+
 ## Background
 
 A personal experience led me to realize the possible shortcomings of solely relying on regex and the split method in Python.
