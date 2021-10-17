@@ -5,7 +5,7 @@ Light-weight tool for normalizing whitespace and accurately tokenizing words. Mu
 
 ## Background
 
-A person experience led me to realize the possible shortcomings of solely relying on regex and the split method in Python.
+A personal experience led me to realize the possible shortcomings of solely relying on regex and the split method in Python.
 
 I was analyzing text data taken from public domain material that had been written by multiple authors. When I used the split method to tokenize the words by half-width space, I had noticed that the words were not split individually; instead, some of the elements in the result list were strings made up of multiple words.
 
