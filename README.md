@@ -59,3 +59,50 @@ for i in range(len(line_list)):
 	print("Line {}: ".format(i) + str(split_by_spaces(line_list[i])))
 
 ```
+
+## Normalizing
+
+In Python, regular expressions can be used to normalize whitespace characters (change certain whitespace characters into other characters). It is relatively easy to write code to normalize a specific whitespace character, but it becomes complicated if you would like to normalize all whitespace characters. Thankfully, there is a simple solution.
+
+### Code Examples
+
+norm_spaces(input_str, space_type, remove_extra_spaces = False)
+
+Required arguments -> input_str, space_type
+
+input_str is the string in which the whitespace characters are to be replaced.
+
+input_str must be passed as a str type.
+
+space_type is the string used to replace all whitespace characters in input_str.
+
+space_type must be passed as a str type.
+
+Optional argument -> remove_extra_spaces
+
+By default, extra whitespace characters are not removed from input_str. 
+
+Specifying remove_extra_spaces as True removes extra whitespace characters from input_str.
+
+Note: Regardless of the value of remove_extra_spaces, the returned string may have leading/trailing whitespace characters, so you may want to use the strip() method as necessary.
+
+```python
+
+from mnl_ws_norm.normalizer import norm_spaces
+
+#Source string with consecutive half-width spaces (Unicode: U+0020) and a tab (Unicode: U+0009).
+source_str = "  Hey,  everybody, 	how  are  you  doing?  "
+
+#Spaces in source_str are replaced with a half-width space, while extra spaces are ignored.
+print(norm_spaces(source_str, " "))
+
+#Spaces in source_str are replaced with a half-width space, and extra spaces are removed.
+print(norm_spaces(source_str, " ", True))
+
+#Spaces in source_str are replaced with a full-width space, while extra spaces are ignored.
+print(norm_spaces(source_str, "　"))
+
+#Spaces in source_str are replaced with a full-width space (Unicode: U+3000), and extra spaces are removed.
+print(norm_spaces(source_str, " 　", True))
+
+```
