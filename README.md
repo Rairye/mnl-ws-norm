@@ -48,7 +48,8 @@ print("source_str1: {}".format(split_by_spaces(source_str1)))
 print("source_str2: {}".format(split_by_spaces(source_str2)))
 print("source_str3: {}".format(split_by_spaces(source_str3)))
 
-#There are some cases where you may want to split a string into lines and then split those lines by whitespace character. In such a case, you can use the splitlines() method.
+#There may be some cases where you want to split a string into lines and then split those lines by whitespace character.
+#In such a case, you can use the splitlines() method.
 
 source_str = "Hey, everybody.\nHow are you doing?\rI am alright."
 
