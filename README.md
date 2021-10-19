@@ -107,6 +107,6 @@ print(norm_spaces(source_str, " ", True))
 print(norm_spaces(source_str, "　"))
 
 #Spaces in source_str are replaced with a full-width space (Unicode: U+3000), and extra spaces are removed.
-print(norm_spaces(source_str, " 　", True))
+print(norm_spaces(source_str, "　", True))
 
 ```
