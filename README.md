@@ -110,3 +110,8 @@ print(norm_spaces(source_str, "　"))
 print(norm_spaces(source_str, "　", True))
 
 ```
+
+# Other languages
+
+1. JavaScript -> https://github.com/Rairye/js-mnl-ws-norm
+
