@@ -7,7 +7,7 @@ Light-weight tool for normalizing whitespace and accurately tokenizing words. Mu
 pip install mnl-ws-norm
 ```
 
-### Code Examples
+### Code Examples (Splitting)
 
 split_by_spaces(input_str)
 
@@ -43,7 +43,7 @@ for i in range(len(line_list)):
 	print("Line {}: ".format(i) + str(split_by_spaces(line_list[i])))
 
 ```
-### Code Examples
+### Code Examples (Normalization)
 
 norm_spaces(input_str, space_type, remove_extra_spaces = False)
 
