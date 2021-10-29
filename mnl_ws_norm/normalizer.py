@@ -57,7 +57,7 @@ def norm_spaces(input_str, space_type, remove_extra_spaces = False):
     if len(input_str) == 0:
         return input_str
     
-    result = ""
+    result = []
     last_category = ""
     last_replacement = None
     string_len = len(input_str)
@@ -68,7 +68,7 @@ def norm_spaces(input_str, space_type, remove_extra_spaces = False):
 
         if current_category == "SPACE":
             if (last_category == "SPACE" and remove_extra_spaces == False) or last_category != "SPACE":
-                result+= (input_str[0 if last_replacement == None else last_replacement + 1: i] + space_type)
+                result.append((input_str[0 if last_replacement == None else last_replacement + 1: i] + space_type))
 
             last_replacement = i
             
@@ -81,9 +81,9 @@ def norm_spaces(input_str, space_type, remove_extra_spaces = False):
         return input_str
 
     if last_replacement < string_len - 1:
-        result+=input_str[last_replacement+1:]
+        result.append(input_str[last_replacement+1:])
     
-    return result if remove_extra_spaces == False else trim_result(result)
+    return "".join(result) if remove_extra_spaces == False else trim_result("".join(result))
 
 def split_by_spaces(input_str):
     if type(input_str) != str:
